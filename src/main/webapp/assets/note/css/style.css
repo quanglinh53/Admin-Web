@@ -1,0 +1,659 @@
+
+/** manhpt - fix table overflow horizontal */
+.table-overflow-x-fix {
+    overflow-x: scroll;
+}
+
+.panel .table td, .panel .table th {
+    padding: 6px 6px;
+    border-top: 1px solid #e1e1e1;
+}
+
+.box-shadow-inner {
+    -webkit-box-shadow: inset 0px 0px 20px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 0px 20px rgba(0,0,0,0.1);
+}
+
+.logo-menu{
+    /* background-image: url('/fms/assets/images/bg_logo.png')!important ;*/
+    background-size: 100% 100%;
+}
+.menu-header{
+    background-image: url('/assets/images/bg_header.png')!important;
+    background-repeat:repeat-x!important;
+}
+.menu-header a{
+    color:#ffffff;
+    max-height:100px;
+}
+.menu-header a:hover{
+    color:#ffffff;
+    max-height:100px;
+}
+.menu-header-right {
+    background: none!important;
+}
+.menu-header-right a:hover{
+    color:#ffffff;
+}
+.menu-header-right a{
+    color:#ffffff;
+}
+@media (min-width: 768px){
+    .menu-header-right  {
+        padding-top: 15px!important;
+        padding-bottom: 0px!important;
+    }
+}
+.logo-menu{
+    background-image: url('/assets/images/bg_logo.png')!important ;
+    background-size: 100% 100%;
+}
+
+.none-box{
+    border: none!important;
+    box-shadow: none;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0)!important;
+}
+.menu-header-login{
+    /*background-image: url('/fms/assets/images/vehicle-tracking.png')!important;*/
+    background-repeat:no-repeat/*repeat-x!important*/;
+}
+
+.logo-menu-login{
+    background-image: url('/assets/images/v.png')!important ;
+    background-size: 100% 100%;
+    margin:0 auto!important;
+    height: 300px;
+}
+@media screen and (max-width: 850px) {
+    .logo-menu-login{
+        display: none;
+    }
+}
+
+.image-login1{
+    width:70%;
+    height:170px;
+    background-image:  url('/assets/images/dog1.jpg');
+    background-size: 100% 100%;
+    margin-top:28px;
+    float: right;
+}
+.image-login3{
+    width:20%;
+    height:170px;
+    margin-top:28px;
+}
+.image-login2{
+    width:70%;
+    height:170px;
+    background-image:  url('/assets/images/dog2.jpg');
+    background-size: 100% 100%;
+    margin-top:28px;
+}
+.bottom-login{
+    margin-bottom:0px!important;
+}
+.topIndex{
+    z-index: 9999!important;
+}
+.botIndex{
+    z-index:1!important;
+}
+.relative{
+    position: relative;
+}
+.color-black{
+    color: #000000;
+}
+.logo_fms{
+    max-height: 50px!important;
+}
+
+ /*huy bo scroll trong table o ban update 2.0. Nhung luu � neu la mobile co the se bi co chu ko xem full d�i dc*/
+ .table-responsive{
+     overflow-x: visible;
+ }
+
+.errorMessage{list-style: none;}
+
+
+
+/*daicq*/
+
+/*
+Project: Jquery Plugin to select multiple media files (i.e. images and videos). v.1.0.0.1
+Project Description: using jquery and bootstrap by this you can create multiple file selector,preview
+on boostrap modal,also able to delete file.
+Author: Abhishek Mishra
+*/
+
+#media-list li img {
+    width: 100px;
+    height: 100px;
+}
+
+
+#media-list li {
+    height: 102px
+}
+
+#media-list li video {
+    width: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+div#hint_brand .modal-dialog {
+    top: 110px;
+    width: 567px;
+    max-width: 100%
+}
+
+li.myupload span {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: #fff
+}
+
+li.myupload span input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+li.myupload span i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ccc;
+    font-size: 54px
+}
+
+
+
+#media-list li {
+    float: left;
+    border: 1px solid #ccc;
+    background: #ccc;
+    position: relative;
+    margin: 0 10px 5px 0;
+    width: 102px
+}
+
+#media-list li:last-child {
+    margin-right: 0
+}
+
+.post-thumb {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none
+}
+
+#media-list li:hover .post-thumb {
+    display: block
+}
+
+a.remove-pic {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: block;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    padding: 3px 0
+}
+
+a.remove-pic2 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: block;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    padding: 3px 0
+}
+
+.inner-post-thumb {
+    position: relative
+}
+
+.user-post-text-wrap {
+    position: relative
+}
+
+.user-pic-post {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0
+}
+
+.user-pic-post img {
+    width: 100%
+}
+
+.user-txt-post {
+    padding: 0 0 0 65px
+}
+
+textarea.form-control.upostTextarea {
+    border: 0;
+    box-shadow: none;
+    height: 85px;
+    resize: none
+}
+
+.user-post-text-wrap {
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 15px
+}
+
+.user-post-btn-wrap {
+    margin: 25px 0 0
+}
+
+ul.btn-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+ul.btn-nav li {
+    position: relative;
+    float: left;
+    margin: 0 10px 0 0
+}
+
+ul.btn-nav li span input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    opacity: 0;
+    filter: alpha(opacity=100)
+}
+
+ul#media-list {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+
+#media-list li img {
+    width: 100px;
+    height: 100px;
+}
+
+
+#media-list li {
+    height: 102px
+}
+
+#media-list li video {
+    width: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+div#hint_brand .modal-dialog {
+    top: 110px;
+    width: 567px;
+    max-width: 100%
+}
+
+li.myupload span {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: #fff
+}
+
+li.myupload span input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+li.myupload span i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ccc;
+    font-size: 54px
+}
+
+
+/*css for avatar*/
+
+#media-list-avatar li img {
+    width: 100px;
+    height: 100px;
+}
+
+
+#media-list-avatar li {
+    height: 102px
+}
+
+#media-list-avatar li video {
+    width: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+div#hint_brand .modal-dialog {
+    top: 110px;
+    width: 567px;
+    max-width: 100%
+}
+
+li.myupload-avatar span {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: #fff
+}
+
+li.myupload-avatar span input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+li.myupload-avatar span i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ccc;
+    font-size: 54px
+}
+
+
+
+#media-list-avatar li {
+    float: left;
+    border: 1px solid #ccc;
+    background: #ccc;
+    position: relative;
+    margin: 0 10px 5px 0;
+    width: 102px
+}
+
+#media-list-avatar li:last-child {
+    margin-right: 0
+}
+
+.post-thumb {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none
+}
+
+#media-list-avatar li:hover .post-thumb {
+    display: block
+}
+
+a.remove-pic {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: block;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    padding: 3px 0
+}
+
+a.remove-pic2 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: block;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    padding: 3px 0
+}
+
+.inner-post-thumb {
+    position: relative
+}
+
+.user-post-text-wrap {
+    position: relative
+}
+
+.user-pic-post {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0
+}
+
+.user-pic-post img {
+    width: 100%
+}
+
+.user-txt-post {
+    padding: 0 0 0 65px
+}
+
+textarea.form-control.upostTextarea {
+    border: 0;
+    box-shadow: none;
+    height: 85px;
+    resize: none
+}
+
+.user-post-text-wrap {
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 15px
+}
+
+.user-post-btn-wrap {
+    margin: 25px 0 0
+}
+
+ul.btn-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+ul.btn-nav li {
+    position: relative;
+    float: left;
+    margin: 0 10px 0 0
+}
+
+ul.btn-nav li span input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    opacity: 0;
+    filter: alpha(opacity=100)
+}
+
+ul#media-list-avatar {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+
+#media-list-avatar li img {
+    width: 100px;
+    height: 100px;
+}
+
+
+#media-list-avatar li {
+    height: 102px
+}
+
+#media-list-avatar li video {
+    width: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+div#hint_brand .modal-dialog {
+    top: 110px;
+    width: 567px;
+    max-width: 100%
+}
+
+li.myupload-avatar span {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: #fff
+}
+
+li.myupload-avatar span input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+li.myupload-avatar span i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ccc;
+    font-size: 54px
+}
+
+a.remove-pic-avatar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: block;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    padding: 3px 0
+}
+
+/*update 25/08/2019*/
+.icon_action_in_list{
+    max-width: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.action-thead-2-items{
+    width: 90px;
+}
+
+.action-thead-3-items{
+    width: 120px;
+}
+
+
+.align-center{
+    text-align: center;
+    margin: 10px;
+}
+
+/*update 26/08/2019*/
+.icon_action_in_list:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+}
+
+.wrap {
+    float: right;
+    color: #000000;
+    position: relative;
+    padding-top: 10px;
+}
+
+.button-sendEmailForgotPass {
+    margin-left: 32%;
+    background-color: #07A6D6;
+    height: 41px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 24px;
+}
+
+label.required:after {content: " *"; color: red;}
+.truong-text-verticel{
+    vertical-align: middle !important;
+}
