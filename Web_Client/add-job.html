@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="theme-default">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tạo công việc mới</title>
+
+
+    <link type="text/css" href="assets/css/themes/default/vendor-fullcalendar.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/themes/default/vendor-weathericons.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/themes/default/vendor-bootstrap-datepicker.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/themes/default/vendor-summernote.css" rel="stylesheet">
+    <!-- Simplebar -->
+    <link type="text/css" href="assets/vendor/simplebar.css" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/css/themes/default/app.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/themes/default/slider.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-md navbar-light d-print-none">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- SVG Logo -->
+
+                <svg width="24px" height="24px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMaxYMin meet">
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <path d="M3,-3.15936513e-15 L20,-2.74650094e-15 L20,-2.66453526e-15 C21.6568542,-2.96889791e-15 23,1.34314575 23,3 L23,20 L23,20 C23,21.6568542 21.6568542,23 20,23 L6,23 L3,23 L3,23 C1.34314575,23 1.09108455e-15,21.6568542 8.8817842e-16,20 L0,3 L0,3 C-2.02906125e-16,1.34314575 1.34314575,-3.24835102e-15 3,-3.55271368e-15 Z" id="logoBackground"></path>
+                      <rect id="Rectangle-6" fill="#FFFFFF" x="1.0952381" y="12.0960631" width="9.96553315" height="9.76943696"></rect>
+                      <rect id="Rectangle-6-Copy" fill="#FFFFFF" x="11.9533428" y="1.05597629" width="9.96553315" height="9.76943696"></rect>
+                </g>
+              </svg>
+                <!-- //End SVG Logo -->
+
+                <span class="navbar-brand-text">flow</span>
+                <small class="text-light">v.1</small>
+            </a>
+            
+            <button class="navbar-toggler navbar-toggler-right d-md-none d-lg-none" type="button" data-toggle="sidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav align-items-center flex-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Kho Tài Liệu</a>
+                        <div class="dropdown-menu">
+                            <a href="category-document.html" class="dropdown-item dropdown-item-action">Tài Liệu 1</a>
+                            <a href="category-document.html" class="dropdown-item dropdown-item-action ">Tài Liệu 2</a>
+                            <a href="category-document.html" class="dropdown-item dropdown-item-action">Tài Liệu 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="category-job.html" class="nav-link" aria-expanded="false">Tìm việc làm</a>
+                    </li>
+                    <li class="nav-item nav-link flex-auto">
+                        <div class="form-group m-0">
+                            <div class="input-group input-group--inline" style="width: 88% !important;">
+                                
+                                <select class="custom-select" style="    width: 10% !important;background-color: #eff4f8;position: fixed;height: 33px;margin-top: 1px;">
+                                  <option selected>Tất cả</option>
+                                  <option value="1">Tài liệu hay</option>
+                                  <option value="2">Mẫu website</option>
+                                  <option value="3">Mẫu email</option>
+                                  <option value="4">Việc làm</option>
+                                  <option value="5">Việc full time</option>
+                                </select>
+                               <!--  <div style="position: unset;"> -->
+                                    <input type="text" class="form-control" name="search" autocomplete="off" style="position: unset;padding-left: 35%;padding-right: 15%;">    
+                                <!-- </div> -->
+                                
+
+                                <a href="#" style="position: inherit;margin: 0 -32px 0;padding-top: 5px;">
+                                    <i class="material-icons">search</i>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <!-- Tìm kiếm nâng cao -->
+                    <li class="nav-item align-self-center">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#advancedSearch">
+                            <i class="material-icons align-middle">location_searching</i>
+                        </a>
+                    </li>
+                    <!-- Thông báo -->
+                    <li class="nav-item dropdown notifications align-self-center">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="material-icons align-middle">notifications_active</i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header d-flex align-items-center">
+                                <span>Notifications</span>
+                                <a href="#" class="ml-auto">
+                                    <i class="material-icons align-middle md-18">close</i>
+                                </a>
+                            </div>
+                            <div class="dropdown-item flex-column align-items-start">
+                                <div class="w-100"><a href="#">themefy</a> received a new quote</div>
+                                <div class="w-100 text-muted">4 secs ago</div>
+                            </div>
+                            <div class="dropdown-item flex-column align-items-start">
+                                <div class="w-100"><a href="#">karen</a> received a new quote</div>
+                                <div class="w-100 text-muted">25 mins ago</div>
+                            </div>
+                            <div class="dropdown-item flex-column align-items-start">
+                                <div class="w-100"><a href="#">jim</a> received a new quote</div>
+                                <div class="w-100 text-muted">7 hrs ago</div>
+                            </div>
+                            <div class="dropdown-item flex-column text-right">
+                                <a href="#">View All <i class="material-icons md-18 align-middle">arrow_forward</i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End thông báo-->
+                    <!-- User đã Login -->
+                    <li class="nav-item dropdown ml-2">
+                        <a href="#" class="nav-link dropdown-toggle dropdown-clear-caret" data-toggle="dropdown" aria-expanded="false">
+                            <span class="d-none d-lg-inline-block">Nguyễn Tuấn</span> <img src="assets/images/avatars/andrew-robles-300868.jpg" class="img-fluid rounded-circle ml-1" width="35" alt="">
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">attach_money</i> <span class="align-middle">Số dư: 200 xu</span></a>
+                            <a href="posted_material.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">assignment</i> <span class="align-middle">Tài liệu đăng tải</span></a>
+                            <a href="hire_freelancer.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">assignment_ind</i> <span class="align-middle">Thuê Freelancer</span></a>
+                            <a href="#" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">assessment</i> <span class="align-middle">Doanh thu</span></a>
+                            <a href="history.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">history</i> <span class="align-middle">Lịch sử</span></a>
+
+                            <a href="account.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">account_circle</i> <span class="align-middle">Tài khoản</span></a>
+                            
+                            <a href="login.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">exit_to_app</i> <span class="align-middle">Thoát</span></a>
+                        </div>
+                    </li>
+                    <!--End User đã Login -->
+
+                    <!-- User chua Login -->
+                    <!-- <li class="nav-item dropdown ml-2 dis-flex">
+                        <div class="mr-auto">
+                            <button type="button" class="btn btn-success mr-1" style="width: 94px;">Đăng nhập</button>
+                        
+                        </div>
+                        <div class="mr-auto">
+                            <button type="button" class="btn btn-danger" style="width: 94px;">Đăng ký</button>
+                        </div>
+                    </li> -->
+                    <!--End User chua Login -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout p-bottom" data-fullbleed data-push data-has-scrolling-region>
+        <div class="mdk-drawer-layout__content mdk-header-layout__content--scrollable">
+            <!-- Content -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Tạo công việc mới</h4>
+                            </div>
+                            <form>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="namejob">Tên công việc</label>
+                                        <input type="text" name="namejob" id="namejob" class="form-control" placeholder="Tổi thiểu 20 ký tự - Quyết định 80% SEO">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="describe">Mô tả ngắn</label>
+                                        <input type="text" name="describe" id="namejob" class="form-control">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="address">Địa chỉ</label>
+                                            <input type="text" class="form-control" id="address"  required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="salary">Ngân sách</label>
+                                            <input type="text" class="form-control" id="salary"  required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 mb-3">
+                                            <label for="city">Thành phố</label>
+                                            <select id="city" class="custom-select d-block is-invalid bg-df" required>
+                                              <option value="">Chọn thành phố</option>
+                                              <option value="1">One</option>
+                                              <option value="2">Two</option>
+                                              <option value="3">Three</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Bạn chưa chọn thành phố.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="district">Quận huyện</label>
+                                            <select id="district" class="custom-select d-block is-invalid bg-df" required>
+                                              <option value="">Chọn quận / huyện</option>
+                                              <option value="1">One</option>
+                                              <option value="2">Two</option>
+                                              <option value="3">Three</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Bạn chưa chọn quận / huyên.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="category">Danh mục</label>
+                                            <select id="category" class="custom-select d-block is-invalid bg-df" required>
+                                              <option value="">Chọn danh mục</option>
+                                              <option value="1">One</option>
+                                              <option value="2">Two</option>
+                                              <option value="3">Three</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Bạn chưa chọn danh mục.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="deadline-time">Hạn nhận hồ sơ</label>
+                                            <input type="text" class="datepicker form-control is-invalid" id="deadline-time" placeholder="dd/mm/yyyy" required>
+                                            <div class="invalid-feedback">
+                                                Bạn chưa nhập hạn nhận hồ sơ.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="select-2">Thẻ tag bài viết</label>
+                                        <select class="form-control select-2" name="options[]" id="select2" multiple="multiple">
+                                            <option selected="selected" value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                            <option value="4">Four</option>
+                                            <option value="5">Five</option>
+                                            <option value="6">Six</option>
+                                            <option value="7">Seven</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="work-content">Nội dung công việc</label>
+                                        <div class="text-editor">
+                                            Start editing text...
+                                        </div>
+                                    </div>
+                                    <div class="dis-flex">
+                                        <button class="btn btn-primary mr-auto pr-4 pl-4">Lưu</button>
+                                        <a href="setting.html" class="btn btn-primary mr-auto pr-4 pl-4">Hủy</a>
+                                    </div>
+                                </div>
+                                
+                                
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- End Content -->
+            <!-- footer -->
+            <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-md">
+                            <div class="dis-flex">
+                                <svg width="30px" height="30px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMaxYMin meet" class="mr-auto">
+                                    <defs></defs>
+                                    <g id="logo-Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M3,-3.15936513e-15 L20,-2.74650094e-15 L20,-2.66453526e-15 C21.6568542,-2.96889791e-15 23,1.34314575 23,3 L23,20 L23,20 C23,21.6568542 21.6568542,23 20,23 L6,23 L3,23 L3,23 C1.34314575,23 1.09108455e-15,21.6568542 8.8817842e-16,20 L0,3 L0,3 C-2.02906125e-16,1.34314575 1.34314575,-3.24835102e-15 3,-3.55271368e-15 Z" id="Rectangle-5" fill="#6774df"></path>
+                                        <rect id="logo-Rectangle-6" fill="#FFFFFF" x="1.0952381" y="12.0960631" width="9.96553315" height="9.76943696"></rect>
+                                        <rect id="logo-Rectangle-6-Copy" fill="#FFFFFF" x="11.9533428" y="1.05597629" width="9.96553315" height="9.76943696"></rect>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="dis-flex mr-t-20">
+                                <div class="mr-auto">
+                                    <a href="#"><img src="./assets/images/facebook-48.png" ></a>
+                                </div>
+                                <div class="mr-auto">
+                                    <a href="#"><img src="./assets/images/youtube-48.png" ></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>VỀ CHÚNG TÔI</h5>
+                            <ul class="list-unstyled text-small fix-text">
+                                <li><a class="text-muted" href="#">- Giới thiệu</a></li>
+                                <li><a class="text-muted" href="#">- Quy định chung</a></li>
+                                <li><a class="text-muted" href="#">- Chính sách bán tài liệu</a></li>
+                                <li><a class="text-muted" href="#">- Chính sách tuyển freelancer</a></li>
+                                <li><a class="text-muted" href="#">- Câu hỏi thường gặp</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>HƯỚNG DẪN</h5>
+                            <ul class="list-unstyled text-small fix-text">
+                                <li><a class="text-muted" href="#">- Tải code</a></li>
+                                <li><a class="text-muted" href="#">- Tìm việc</a></li>
+                                <li><a class="text-muted" href="#">- Hướng dẫn nạp tiền</a></li>
+                                <li><a class="text-muted" href="#">- Hướng dẫn rút tiền</a></li>
+                                <li><a class="text-muted" href="#">- Hỗ trợ kỹ thuật</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>THANH TOÁN HỖ TRỢ</h5>
+                            <div class="list-unstyled text-small">
+                                <a class="text-muted" href="#"><img src="./assets/images/momo.jpg" class="mr-t-10"></a>
+                                <a class="text-muted" href="#"><img src="./assets/images/nganhang.jpg" class="mr-t-10"></a>
+                                <a class="text-muted" href="#"><img src="./assets/images/nganluong.jpg" class="mr-t-10"></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 jeg_footer_bottom dis-flex">
+                    <div class="mr-auto">
+                        <span>Copyrights © 2021 ................ |<a href="#"> Privacy Policy </a>| Nội dung đã được bảo vệ bản quyền</span> <img src="./assets/images/dcma.png">
+                    </div>
+                </div>
+            </footer>
+            
+            <!-- End footer -->
+        </div>
+
+    </div>
+    
+    <!-- drawer -->
+    <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+        <div class="mdk-drawer__content">
+            <div class="mdk-drawer__inner" data-simplebar data-simplebar-force-enabled="true">
+
+                <nav class="drawer  drawer--dark">
+                    <div class="drawer-spacer drawer-spacer-border">
+                        <div class="media align-items-center">
+                            <!-- User đã Login -->
+                            <!-- <img src="assets/images/avatars/andrew-robles-300868.jpg" class="img-fluid rounded-circle mr-2" width="40" alt="">
+                            <div class="media-body" style="line-height: 1.2">
+                                <a href="account.html"><strong>Nguyễn Tuấn</strong></a>
+                                <div>Site Manager</div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle dropdown-clear-caret" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="material-icons">more_vert</i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="#" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">attach_money</i> <span class="align-middle">Số dư: 200 xu</span></a>
+                                    <a href="posted_material.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">assignment</i> <span class="align-middle">Tài liệu đăng tải</span></a>
+                                    <a href="hire_freelancer.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">assignment_ind</i> <span class="align-middle">Thuê Freelancer</span></a>
+                                    <a href="#" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">assessment</i> <span class="align-middle">Doanh thu</span></a>
+                                    <a href="history.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">history</i> <span class="align-middle">Lịch sử</span></a>
+
+                                    <a href="account.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">account_circle</i> <span class="align-middle">Tài khoản</span></a>
+                                    
+                                    <a href="login.html" class="dropdown-item dropdown-item-action"><i class="material-icons md-18 align-middle mr-1">exit_to_app</i> <span class="align-middle">Thoát</span></a>
+                                </div>
+                            </div> -->
+                            <!-- End User đã Login -->
+
+                            <!-- User chưa Login -->
+                            <div class="mr-auto">
+                                <a href="login.html">
+                                    <button type="button" class="btn btn-success" style="width: 94px;">Đăng nhập</button>
+                                </a>
+                            </div>
+                            <div class="mr-auto">
+                                <a href="signup.html">
+                                    <button type="button" class="btn btn-danger" style="width: 94px;">Đăng ký</button>
+                                </a>
+                            </div>
+                            <!-- End User chưa Login -->
+                        </div>
+                    </div>
+                    <!-- DROPDOWN -->
+                    <div class="drawer-spacer">
+                        <div class="dropdown">
+                            <input class="btn btn-block dropdown-toggle text-left text-white" type="text" aria-haspopup="true" aria-expanded="false" placeholder="Tìm kiếm">
+                            <i class="material-icons" style="float: right;margin: -29px 5px;position: inherit;">search</i>
+                        </div>
+                    </div>
+                    <!-- HEADING -->
+                    <div class="drawer-heading">
+                        Menu
+                    </div>
+                    <!-- MENU -->
+                    <ul class="drawer-menu" id="mainMenu" data-children=".drawer-submenu">
+                        <li class="drawer-menu-item drawer-submenu">
+                            <a data-toggle="collapse" data-parent="#mainMenu" href="#" data-target="#dashboardMenu" aria-controls="dashboardMenu" aria-expanded="true">
+                                <i class="material-icons">collections_bookmark</i>
+                                <span class="drawer-menu-text"> Tài Liệu</span>
+                            </a>
+                            <ul class="collapse show" id="dashboardMenu">
+                                <li class="drawer-menu-item active"><a href="index.html">Mẫu Website</a></li>
+                                <li class="drawer-menu-item "><a href="index-second.html">Mẫu Trang Chủ</a></li>
+                                <li class="drawer-menu-item "><a href="index-third.html">Mẫu Email</a></li>
+                            </ul>
+                        </li>
+                        <li class="drawer-menu-item drawer-submenu">
+                            <a data-toggle="collapse" data-parent="#mainMenu" href="#appsMenu" data-target="#appsMenu" aria-controls="appsMenu" aria-expanded="false" class="collapsed">
+                                <i class="material-icons">assignment</i>
+                                <span class="drawer-menu-text"> Việc Làm</span>
+                            </a>
+                            <ul class="collapse " id="appsMenu">
+                                <li class="drawer-menu-item "><a href="#">Mẫu việc 1</a></li>
+                                <li class="drawer-menu-item "><a href="#">Mẫu việc 2</a></li>
+                                <li class="drawer-menu-item "><a href="#">Mẫu việc 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="drawer-menu-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#advancedSearch">
+                                <i class="material-icons align-middle">location_searching</i>
+                                <span class="drawer-menu-text"> Tìm kiếm nâng cao</span> 
+                            </a>
+                        </li>
+                        <li class="drawer-menu-item">
+                            <a href="#" aria-expanded="false" class="collapsed">
+                                <i class="material-icons">notifications_active</i>
+                                <span class="drawer-menu-text"> Thông báo</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    
+                </nav>
+
+            </div>
+        </div>
+    </div>
+    <!-- Tìm kiếm nâng cao -->
+    <div class="modal fade" id="advancedSearch" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="defaultModalLabel">Tìm Kiếm Nâng Cao</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Tìm kiếm -->
+                    <div class="row px-2">
+                        <div class="dropdown width-webkit-fill">
+                            <form>
+                                <input class="btn btn-block dropdown-toggle text-left text-black bg-df" type="text" aria-haspopup="true" aria-expanded="false" placeholder="Tìm kiếm" >
+                                <a href="#"><i class="material-icons" style="float: right;margin: -29px 5px;position: inherit;">search</i></a>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End tìm kiếm -->
+
+                    <form>
+                        <!-- Ngân sách -->
+                        <div class="row px-2 mt-3 dis-bl">
+                            <div class="p-1">
+                                <span class="font-weight-bold">Ngân Sách</span>
+                            </div>
+                            <div class="p-1 width-webkit-fill">
+                                <div class="mr-auto dis-flex">
+                                     <input class="btn btn-block dropdown-toggle text-left text-black bg-df" type="text" aria-haspopup="true" aria-expanded="false" placeholder="Từ" >
+                                     <div class="mr-auto px-2">-</div>
+                                     <input class="btn btn-block dropdown-toggle text-left text-black bg-df" type="text" aria-haspopup="true" aria-expanded="false" placeholder="Đến" >
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End ngân sách -->
+
+                        <!-- Địa Điểm -->
+                        <div class="row px-2 mt-3 dis-bl">
+                            <div class="p-1">
+                                <span class="font-weight-bold">Địa Điểm</span>
+                            </div>
+                            <div class="p-1 width-webkit-fill">
+                                <select class="custom-select bg-df mb-2">
+                                    <option selected>Chọn thành phố</option>
+                                    <option value="1">Hà Nội</option>
+                                    <option value="2">T.P Hồ Chí Minh</option>
+                                    <option value="3">Thái Bình</option>
+                                    <option value="4">Nha Trang</option>
+                                    <option value="5">Đà Nẵng</option>
+                                    <option value="6">Sơn La</option>
+                                    <option value="7">Nam Định</option>
+                                </select>
+
+                                <select class="custom-select bg-df">
+                                    <option selected class="font-italic">Chọn quận/huyện</option>
+                                    <option value="1">Bắc Từ Liêm</option>
+                                    <option value="2">Nam Từ Liêm</option>
+                                    <option value="3">Cổ Nhuế 1</option>
+                                    <option value="4">Cổ Nhuế 2</option>
+                                    <option value="5">Hà Đông</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- End Địa Điểm -->
+
+                        <!-- Thời Gian -->
+                        <div class="row px-2 mt-3 dis-bl">
+                            <div class="p-1">
+                                <span class="font-weight-bold">Thời Gian Làm Việc</span>
+                            </div>
+                            <div class="p-1 width-webkit-fill">
+                                <select class="custom-select bg-df">
+                                    <option selected>Chọn Thời Gian Làm Việc</option>
+                                    <option value="1">Toàn Thời Gian</option>
+                                    <option value="2">Bán Thời Gian</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- End Thời Gian -->
+                        <div class="row px-2 mt-3 dis-bl">
+                            <button type="button" class="btn btn-success width-webkit-fill">
+                                Tìm kiếm
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
+    <script src="assets/vendor/moment.min.js"></script>
+    <script src="assets/vendor/dateformat.js"></script>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+        window.theme = "default";
+    </script>
+    <script src="assets/js/color_variables.js"></script>
+
+    <script src="assets/vendor/fullcalendar.min.js"></script>
+    <script src="assets/js/calendars.js"></script>
+    <script src="assets/vendor/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+
+
+
+
+    <script src="assets/vendor/dom-factory.js"></script>
+    <!-- DOM Factory -->
+    <script src="assets/vendor/material-design-kit.js"></script>
+    <!-- MDK -->
+
+
+
+    <script>
+        (function() {
+            'use strict';
+
+            // Self Initialize DOM Factory Components
+            domFactory.handler.autoInit()
+
+            // Connect button(s) to drawer(s)
+            var sidebarToggle = Array.prototype.slice.call(document.querySelectorAll('[data-toggle="sidebar"]'))
+
+            sidebarToggle.forEach(function(toggle) {
+                toggle.addEventListener('click', function(e) {
+                    var selector = e.currentTarget.getAttribute('data-target') || '#default-drawer'
+                    var drawer = document.querySelector(selector)
+                    if (drawer) {
+                        drawer.mdkDrawer.toggle()
+                    }
+                })
+            })
+
+        })();
+        
+
+    </script>
+    <script src="assets/vendor/select2.full.min.js"></script>
+
+    <script>
+        $('.select-2').select2({
+            theme: 'bootstrap',
+            placeholder: 'Select an option'
+        });
+    </script>
+    <script src="assets/vendor/summernote-bs4.min.js"></script>
+
+    <script>
+        $('.text-editor').summernote({
+            height: '200',
+            disableResizeEditor: true
+        });
+    </script>
+</body>
+
+</html>
